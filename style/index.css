@@ -1,0 +1,26 @@
+
+.accueil_titre_photo {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 80%;
+    align-items: flex-start;
+    margin: auto;
+  }
+  
+  .accueil_titre_photo h1 {
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  .accueil_titre_photo h2 {
+    margin-bottom: 0px;
+  }
+  
+  .accueil_titre_photo div {
+    padding-right: 8px;
+    margin-top: 15px;
+  }
+
+  main img {
+    border: 2px solid red;
+  }
