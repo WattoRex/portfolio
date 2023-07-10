@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio</title>
+    <style>
+        /* Styles pour la mise en page */
+        body {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: flex-start;
+            width: 100%;
+        }
+        
+        .project {
+            flex-basis: calc(33.33% - 20px);
+            margin: 10px;
+            height: 200px;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            transition: flex-basis 0.3s ease;
+            position: relative;
+        }
+        
+        .project:hover {
+            flex-basis: calc(33.33% + 20px);
+        }
+        
+        .project img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .project:hover img {
+            transform: scale(1.2);
+        }
+        
+        .project .info {
+            display: none;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: #f7f7f7;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 50%;
+            overflow: auto;
+        }
+        
+        .project.active {
+            flex-basis: calc(100% - 20px);
+            height: auto;
+            cursor: initial;
+            position: fixed;
+            top: 150px;
+            left: 0;
+            right: 0;
+            bottom: 150px;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            overflow: auto;
+        }
+        
+        .project.active img {
+            width: auto;
+            max-width: 80%;
+            max-height: 80vh;
+        }
+        
+        .project.active .info {
+            display: block;
+        }
+        
+        .project .info h2, .project .info p {
+            margin: 0;
+        }
+        
+        .show-all-btn {
+            margin-top: 20px;
+        }
+
+        .Description {
+            color: yellow;
+            align-content: center;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="portfolio">
+        <div class="project" onclick="toggleProject(this)">
+            <img src="path/to/image1.jpg" alt="Projet 1">
+            <div class="info">
+                <h2>Projet 1</h2>
+                <p class="Description">Description du projet 1.</p>
+            </div>
+        </div>
+    
+        <div class="project" onclick="toggleProject(this)">
+            <img src="path/to/image2.jpg" alt="Projet 2">
+            <div class="info">
+                <h2>Projet 2</h2>
+                <p>Description du projet 2.</p>
+            </div>
+        </div>
+    
+        <div class="project" onclick="toggleProject(this)">
+            <img src="path/to/image3.jpg" alt="Projet 3">
+            <div class="info">
+                <h2>Projet 3</h2>
+                <p>Description du projet 3.</p>
+            </div>
+        </div>
+    </div>
+    
+    <button class="show-all-btn" onclick="showAllProjects()">Afficher tous les projets</button>
+    
+    <script>
+        var portfolio = document.querySelector('.portfolio');
+        var projects = portfolio.querySelectorAll('.project');
+        
+        function toggleProject(project) {
+            projects.forEach(function(proj) {
+                proj.classList.remove('active');
+            });
+            
+            project.classList.add('active');
+            
+            projects.forEach(function(proj) {
+                if (proj !== project) {
+                    proj.style.display = 'none';
+                }
+            });
+        }
+        
+        function showAllProjects() {
+            projects.forEach(function(proj) {
+                proj.classList.remove('active');
+                proj.style.display = 'block';
+            });
+        }
+    </script>
+</body>
+</html>
