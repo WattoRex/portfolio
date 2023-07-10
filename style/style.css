@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+}
+
+h1 {
+  font-size: 3.5em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1em;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav a {
+  margin-left: 30px;
+ }
+
+a {
+  color: #242424;
+  text-decoration: none;
+  border: 3px inset; 
+  border-radius: 5px;
+}
+
+a:hover
+{
+  color: #242424;
+  text-decoration: none;
+  border: 3px outset;
+  border-radius: 5px;
+} 
+
+header {
+  padding: 20px 50px;
+  background-color: wheat;
+}
