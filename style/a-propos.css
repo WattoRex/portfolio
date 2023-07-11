@@ -9,3 +9,9 @@
 .Compétence {
     width: 50%
 }
+
+@media screen and (max-width: 576px) {
+    .Présentation_Compétence {
+      flex-direction: column;
+    }
+  }

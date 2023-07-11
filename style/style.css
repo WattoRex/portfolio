@@ -1,5 +1,9 @@
 * {
-  margin: 0;
+  /* Reset CSS */
+  margin: 0; 
+  padding: 0;
+	border: 0;
+	vertical-align: baseline;
 }
 
 h1 {
@@ -41,4 +45,12 @@ a:hover
 header {
   padding: 20px 50px;
   background-color: wheat;
+}
+
+@media screen and (max-width: 576px) {
+  header nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
