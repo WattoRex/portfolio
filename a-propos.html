@@ -39,4 +39,18 @@
 
 </body>
 
+<script>
+  // Gérer le basculement de l'affichage du menu
+  const menuToggle = document.getElementById("menu-toggle");
+  const menuItems = document.querySelector(".menu-items");
+
+  menuToggle.addEventListener("change", function () {
+    if (this.checked) {
+      menuItems.style.display = "flex";
+    } else {
+      menuItems.style.display = "none";
+    }
+  });
+</script>
+
 </html>

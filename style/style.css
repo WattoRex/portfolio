@@ -19,8 +19,10 @@ body {
 nav {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  font-family: 'Manrope', sans-serif;
 }
 
 nav a {
@@ -31,6 +33,9 @@ nav a {
   border-radius: 5px;
  }
 
+ nav img {
+  height: 8vh;
+ }
 
 a:hover
 {
@@ -41,14 +46,36 @@ a:hover
 } 
 
 header {
-  padding: 20px 50px;
+  padding: 5px 20px;
   background-color: wheat;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 996px) {
   header nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  
+  header nav img {
+    margin-bottom: 20px;
+  }
+
+  header,
+  footer {
+    padding: 20px 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  section {
+    padding: 50px 20px 50px 20px;
+  }
+
+  nav a {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
