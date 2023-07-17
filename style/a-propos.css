@@ -1,17 +1,106 @@
-.Présentation_Compétence {
-    display: flex
-    }
+.Présentation_ {
+  display: flex;
+}
 
 .Présentation {
-    width: 50%
+  width: 85%;
+  text-align: justify;
+  margin: auto;
 }
 
-.Compétence {
-    width: 50%
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-@media screen and (max-width: 576px) {
-    .Présentation_Compétence {
-      flex-direction: column;
-    }
+/* CSS pour les compétence */
+/* Valeur Compétence */
+:root {
+  --html-skill-percent: 90%;
+  --css-skill-percent: 80%;
+  --javascript-skill-percent: 75%;
+  --php-skill-percent: 70%;
+  --sql-skill-percent: 65%;
+}
+.skill-percent.html {
+  width: var(--html-skill-percent);
+}
+.skill-percent.css {
+  width: var(--css-skill-percent);
+}
+.skill-percent.javascript {
+  width: var(--javascript-skill-percent);
+}
+.skill-percent.php {
+  width: var(--php-skill-percent);
+}
+
+.skill-percent.sql {
+  width: var(--sql-skill-percent);
+}
+
+/* Mise en forme */
+
+.card {
+  width: 300px;
+  background-color: #778da9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.body {
+  padding: 20px;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.skill-name {
+  width: 120px;
+  font-size: 16px;
+}
+
+.skill-level {
+  width: 160px;
+  height: 10px;
+  background-color: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: 20px;
+}
+
+.skill-percent {
+  background-color: #333;
+  height: 100%;
+  width: var(--skill-percent);
+  animation: fill 1.5s ease-out;
+}
+
+.skill-percent-number {
+  display: none;
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+@keyframes fill {
+  0% {
+    width: 0;
   }
+}
+
+.no-hover:hover {
+  pointer-events: none;
+}

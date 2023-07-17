@@ -16,39 +16,186 @@
   <header>
     <nav>
       <img src="images/logo.png" alt="Logo Manier Valentin" />
-      <span>
-        <a href="index.html">Accueil</a>
-        <a href="a-propos.html">À propos</a>
-        <a href="portfolio.html">Portfolio</a>
+      <span id="menuItems">
+        <a class="liennav" href="index.html">Accueil</a>
+        <a class="liennav" href="a-propos.html">À propos</a>
+        <a class="liennav" href="portfolio.html">Portfolio</a>
+        <a class="liennav" href="contact.html">Contact</a>
       </span>
+      <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+        &#9776;
+      </a>
+    </nav>
   </header>
 
   <main>
     <h1>Titre A-propos</h1>
 
-    <section class="Présentation_Compétence">
-      <span class="Présentation">
-        <p> Test</p>
+    <section class="Présentation_">
+      <span class=" Présentation">
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla consequatur est ex dignissimos! Dicta alias
+          ab aut fugiat harum! Doloribus maxime, voluptatibus laboriosam amet aliquam ut quis corporis quam totam.lorem
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, fugiat perspiciatis adipisci vero doloribus
+          voluptatum doloremque reiciendis sed tenetur sunt maiores quibusdam earum molestiae iure veritatis error atque
+          iste ipsum? </p>
       </span>
+    </section>
+    <section class="Compétence">
+      <div class="card-container">
+        <div class="card">
+          <div class="header">My Skills</div>
+          <div class="body">
+            <div class="skill">
+              <div class="skill-name">HTML</div>
+              <div class="skill-level">
+                <div class="skill-percent html"></div>
+              </div>
+              <div class="skill-percent-number">90%</div>
+            </div>
+            <div class="skill">
+              <div class="skill-name">CSS</div>
+              <div class="skill-level">
+                <div class="skill-percent css"></div>
+              </div>
+              <div class="skill-percent-number">80%</div>
+            </div>
+            <div class="skill">
+              <div class="skill-name">JavaScript</div>
+              <div class="skill-level">
+                <div class="skill-percent javascript"></div>
+              </div>
+              <div class="skill-percent-number">75%</div>
+            </div>
+            <div class="skill">
+              <div class="skill-name">PHP</div>
+              <div class="skill-level">
+                <div class="skill-percent php"></div>
+              </div>
+              <div class="skill-percent-number">70%</div>
+            </div>
+            <div class="skill">
+              <div class="skill-name">SQL</div>
+              <div class="skill-level">
+                <div class="skill-percent sql"></div>
+              </div>
+              <div class="skill-percent-number">65%</div>
+            </div>
+            <label for="show-percentages">Afficher les pourcentages</label>
+            <input type="checkbox" id="show-percentages">
+          </div>
+        </div>
 
-      <span class="Compétence">
-        <p> Test2</p>
-      </span>
+        <div class="card">
+          <div class="header">My Skills</div>
+          <div class="body">
+            <div class="skill">
+              <div class="skill-name">Design</div>
+              <div class="skill-level">
+                <div class="skill-percent html"></div>
+              </div>
+              <div class="skill-percent-number">90%</div>
+            </div>
+            <div class="skill">
+              <div class="skill-name">Animation</div>
+              <div class="skill-level">
+                <div class="skill-percent css"></div>
+              </div>
+              <div class="skill-percent-number">80%</div>
+            </div>
+            <div class="skill">
+              <div class="skill-name">Adobe CC</div>
+              <div class="skill-level">
+                <div class="skill-percent javascript"></div>
+              </div>
+              <div class="skill-percent-number">75%</div>
+            </div>
+            <div class="skill">
+              <div class="skill-name">Photo</div>
+              <div class="skill-level">
+                <div class="skill-percent php"></div>
+              </div>
+              <div class="skill-percent-number">70%</div>
+            </div>
+            <div class="skill">
+              <div class="skill-name">CMS</div>
+              <div class="skill-level">
+                <div class="skill-percent sql"></div>
+              </div>
+              <div class="skill-percent-number">65%</div>
+            </div>
+            <label for="show-percentages2">Afficher les pourcentages</label>
+            <input type="checkbox" id="show-percentages2">
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
 </body>
 
 <script>
-  // Gérer le basculement de l'affichage du menu
-  const menuToggle = document.getElementById("menu-toggle");
-  const menuItems = document.querySelector(".menu-items");
-
-  menuToggle.addEventListener("change", function () {
-    if (this.checked) {
+  function toggleMenu() {
+    var menuItems = document.getElementById("menuItems");
+    if (menuItems.style.display === "none") {
       menuItems.style.display = "flex";
     } else {
       menuItems.style.display = "none";
+    }
+  }
+
+  const skillElements = document.querySelectorAll('.skill');
+
+  skillElements.forEach((skillElement) => {
+    const skillPercentElement = skillElement.querySelector('.skill-percent');
+    const skillPercentNumberElement = skillElement.querySelector('.skill-percent-number');
+
+    skillElement.addEventListener('mouseenter', () => {
+      skillPercentNumberElement.style.display = 'block';
+    });
+
+    skillElement.addEventListener('mouseleave', () => {
+      skillPercentNumberElement.style.display = 'none';
+    });
+  });
+
+  const checkbox1 = document.getElementById("show-percentages");
+  const checkbox2 = document.getElementById("show-percentages2");
+  const skills = document.querySelectorAll(".skill-percent-number");
+  const skillLevels = document.querySelectorAll(".skill-level");
+
+  checkbox1.addEventListener("change", function () {
+    if (checkbox1.checked) {
+      skills.forEach((skill) => {
+        skill.style.display = "block";
+      });
+      skillLevels.forEach((level) => {
+        level.classList.add("no-hover");
+      });
+    } else {
+      skills.forEach((skill) => {
+        skill.style.display = "none";
+      });
+      skillLevels.forEach((level) => {
+        level.classList.remove("no-hover");
+      });
+    }
+  });
+
+  checkbox2.addEventListener("change", function () {
+    if (checkbox2.checked) {
+      skills.forEach((skill) => {
+        skill.style.display = "block";
+      });
+      skillLevels.forEach((level) => {
+        level.classList.add("no-hover");
+      });
+    } else {
+      skills.forEach((skill) => {
+        skill.style.display = "none";
+      });
+      skillLevels.forEach((level) => {
+        level.classList.remove("no-hover");
+      });
     }
   });
 </script>

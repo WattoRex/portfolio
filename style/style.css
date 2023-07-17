@@ -1,19 +1,21 @@
 * {
   /* Reset CSS */
-  margin: 0; 
+  margin: 0;
   padding: 0;
-	border: 0;
-	vertical-align: baseline;
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
 }
 
 h1 {
   font-size: 3.5em;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
   font-size: 1em;
+  background-color: rgba(224, 225, 221, 1);
 }
 
 nav {
@@ -22,60 +24,81 @@ nav {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
+}
+
+header {
+  padding: 5px 20px;
+  background-color: rgba(119, 141, 169, 1);
 }
 
 nav a {
   margin-left: 30px;
   color: #242424;
   text-decoration: none;
-  border: 3px inset; 
-  border-radius: 5px;
- }
-
- nav img {
-  height: 8vh;
- }
-
-a:hover
-{
-  color: #242424;
-  text-decoration: none;
-  border: 3px outset;
-  border-radius: 5px;
-} 
-
-header {
-  padding: 5px 20px;
-  background-color: wheat;
+  background-image: linear-gradient(to right, #32557f, #32557f 0%, #242424 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
 }
 
-@media screen and (max-width: 996px) {
-  header nav {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  header nav img {
-    margin-bottom: 20px;
+nav .liennav:before {
+  content: "";
+  background: #32557f;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+nav .liennav:hover {
+  background-position: 0;
+}
+
+a:hover::before {
+  width: 100%;
+}
+
+nav img {
+  width: 6vh;
+  height: 6vh;
+}
+
+a:hover {
+  color: #242424;
+  text-decoration: none;
+}
+
+#menuItems {
+  display: flex;
+}
+
+#menuItems a {
+  display: block;
+}
+
+.icon {
+  display: none;
+  color: #242424;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  #menuItems {
+    display: none;
   }
 
-  header,
-  footer {
-    padding: 20px 20px;
-  }
-
-  h1 {
-    font-size: 2em;
-  }
-
-  section {
-    padding: 50px 20px 50px 20px;
-  }
-
-  nav a {
-    margin-left: 10px;
-    margin-right: 10px;
+  .icon {
+    display: block;
   }
 }

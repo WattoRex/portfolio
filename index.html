@@ -16,25 +16,38 @@
   <header>
     <nav>
       <img src="images/logo.png" alt="Logo Manier Valentin" />
-      <span>
-        <a href="index.html">Accueil</a>
-        <a href="a-propos.html">À propos</a>
-        <a href="portfolio.html">Portfolio</a>
+      <span id="menuItems">
+        <a class="liennav" href="index.html">Accueil</a>
+        <a class="liennav" href="a-propos.html">À propos</a>
+        <a class="liennav" href="portfolio.html">Portfolio</a>
+        <a class="liennav" href="contact.html">Contact</a>
       </span>
+      <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+        &#9776;
+      </a>
     </nav>
   </header>
 
   <main>
     <section class="accueil_titre_photo">
       <span>
-        <h1>Manier Valentin</h1>
+        <h1 class="test">Manier Valentin</h1>
         <h2>Développeur à votre service ! </h2>
+        <div class="CTA2"><a href="a-propos.html">Decouvrez Moi !</a></div>
       </span>
-      <span>
-        <img src="images/maniervalentin_webdeveloper.png" />
-      </span>
-
+      <img class="photo" src="images/maniervalentin_webdeveloper.png" />
   </main>
 </body>
+
+<script>
+  function toggleMenu() {
+    var menuItems = document.getElementById("menuItems");
+    if (menuItems.style.display === "none") {
+      menuItems.style.display = "flex";
+    } else {
+      menuItems.style.display = "none";
+    }
+  }
+</script>
 
 </html>
