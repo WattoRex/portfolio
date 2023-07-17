@@ -36,7 +36,7 @@ nav a {
   margin-left: 30px;
   color: #242424;
   text-decoration: none;
-  background-image: linear-gradient(to right, #32557f, #32557f 0%, #242424 50%);
+  background-image: linear-gradient(to right, #415a77, #415a77 0%, #242424 50%);
   background-size: 200% 100%;
   background-position: -100%;
   display: inline-block;
@@ -91,14 +91,19 @@ a:hover {
   color: #242424;
   cursor: pointer;
   font-size: 20px;
+  margin-right: 2vh;
 }
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 781px) {
   #menuItems {
     display: none;
   }
 
   .icon {
     display: block;
+  }
+
+  .accueil_titre_photo img {
+    margin-top: 2vh;
   }
 }

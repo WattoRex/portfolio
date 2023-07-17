@@ -7,13 +7,17 @@ h1 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 20vh;
-  height: 4vh;
+  width: 28vh;
+  height: 6vh;
   margin: auto;
   background: #32557f;
   transform: skew(-25deg);
   margin-top: 2vh;
   margin-bottom: 2vh;
+}
+
+.CTA2 h1 {
+  font-size: 3em;
 }
 
 .Contact {
@@ -74,11 +78,16 @@ label {
   margin-bottom: 10px;
 }
 
+.Envoyer {
+  display: flex;
+}
+  
 input[type="submit"] {
   width: 200px;
   margin: auto;
   margin-top: 30px;
 }
+
 
 /* Bouton Menu */
 .container-menu {
@@ -94,7 +103,7 @@ input[type="submit"] {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: #f1f1f1;
+  background: #32557f;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -107,7 +116,7 @@ input[type="submit"] {
   width: 40px;
   height: 5px;
   border-radius: 5px;
-  background: #333;
+  background: #E0E1DD;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -118,7 +127,7 @@ input[type="submit"] {
   content: "";
   position: absolute;
   bottom: 10px;
-  background: #333;
+  background: #E0E1DD;
   width: 100%;
   height: 5px;
   border-radius: 5px;
@@ -128,7 +137,7 @@ input[type="submit"] {
   content: "";
   position: absolute;
   top: 10px;
-  background: #333;
+  background: #E0E1DD;
   width: 100%;
   height: 5px;
   border-radius: 5px;
@@ -163,20 +172,19 @@ input[type="submit"] {
 }
 
 .blob-2 {
-  background: #c7ceea;
+  background: #778DA9;
   transition: all 0.2s 0.2s ease-in-out;
 }
 .blob-3 {
-  background: #ffdac1;
+  background: #778DA9;
   transition: all 0.2s 0.3s ease-in-out;
 }
 .blob-4 {
-  background: #ff9aa2;
+  background: #778DA9;
   transition: all 0.2s 0.4s ease-in-out;
 }
 
 /* Animation */
-
 .container-menu.active .blob-2 {
   top: 85%;
   left: 85%;

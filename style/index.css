@@ -14,7 +14,7 @@
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
-  font-size: 8vh;
+  font-size: 15vh;
   color: rgba(13, 27, 42, 1);
 }
 
@@ -23,7 +23,7 @@
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
-  font-size: 2vh;
+  font-size: 4vh;
   text-align: center;
   color: rgba(13, 27, 42, 1);
 }
@@ -43,22 +43,23 @@ main img {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 18vh;
-  height: 4vh;
+  width: 28vh;
+  height: 6vh;
   margin: auto;
   background: #32557f;
   transform: skew(-25deg);
   margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 
 .CTA2 a {
-  font-size: 1.5em;
+  font-size: 1.4em;
   font-family: Montserrat;
   text-decoration: none;
   color: rgba(13, 27, 42, 1);
 }
 
-@media screen and (max-width: 996px) {
+@media screen and (max-width: 792px) {
   .accueil_titre_photo .photo {
     order: 1;
   }
@@ -66,4 +67,13 @@ main img {
   .accueil_titre_photo span {
     order: 2;
   }
+
+  .accueil_titre_photo h1 {
+    font-size: 12vh;
+  }
+  
+  .accueil_titre_photo h2 {
+    font-size: 3vh;
+  }
 }
+
