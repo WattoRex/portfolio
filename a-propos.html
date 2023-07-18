@@ -15,6 +15,8 @@
 <body>
   <header>
     <nav>
+      <script src="scripts/nav.js">
+      </script>
       <a href="index.html"><img src="images/logo.png" alt="Logo Manier Valentin" /></a>
       <span id="menuItems">
         <a class="liennav" href="index.html">Accueil</a>
@@ -93,35 +95,35 @@
               <div class="skill-level">
                 <div class="skill-percent html"></div>
               </div>
-              <div class="skill-percent-number">90%</div>
+              <div class="skill-percent-number2">90%</div>
             </div>
             <div class="skill">
               <div class="skill-name">Animation</div>
               <div class="skill-level">
                 <div class="skill-percent css"></div>
               </div>
-              <div class="skill-percent-number">80%</div>
+              <div class="skill-percent-number2">80%</div>
             </div>
             <div class="skill">
               <div class="skill-name">Adobe CC</div>
               <div class="skill-level">
                 <div class="skill-percent javascript"></div>
               </div>
-              <div class="skill-percent-number">75%</div>
+              <div class="skill-percent-number2">75%</div>
             </div>
             <div class="skill">
               <div class="skill-name">Photo</div>
               <div class="skill-level">
                 <div class="skill-percent php"></div>
               </div>
-              <div class="skill-percent-number">70%</div>
+              <div class="skill-percent-number2">70%</div>
             </div>
             <div class="skill">
               <div class="skill-name">CMS</div>
               <div class="skill-level">
                 <div class="skill-percent sql"></div>
               </div>
-              <div class="skill-percent-number">65%</div>
+              <div class="skill-percent-number2">65%</div>
             </div>
             <label for="show-percentages2">Afficher les pourcentages</label>
             <input type="checkbox" id="show-percentages2">
@@ -133,71 +135,6 @@
 
 </body>
 
-<script>
-  function toggleMenu() {
-    var menuItems = document.getElementById("menuItems");
-    if (menuItems.style.display === "none") {
-      menuItems.style.display = "flex";
-    } else {
-      menuItems.style.display = "none";
-    }
-  }
-
-  const skillElements = document.querySelectorAll('.skill');
-
-  skillElements.forEach((skillElement) => {
-    const skillPercentElement = skillElement.querySelector('.skill-percent');
-    const skillPercentNumberElement = skillElement.querySelector('.skill-percent-number');
-
-    skillElement.addEventListener('mouseenter', () => {
-      skillPercentNumberElement.style.display = 'block';
-    });
-
-    skillElement.addEventListener('mouseleave', () => {
-      skillPercentNumberElement.style.display = 'none';
-    });
-  });
-
-  const checkbox1 = document.getElementById("show-percentages");
-  const checkbox2 = document.getElementById("show-percentages2");
-  const skills = document.querySelectorAll(".skill-percent-number");
-  const skillLevels = document.querySelectorAll(".skill-level");
-
-  checkbox1.addEventListener("change", function () {
-    if (checkbox1.checked) {
-      skills.forEach((skill) => {
-        skill.style.display = "block";
-      });
-      skillLevels.forEach((level) => {
-        level.classList.add("no-hover");
-      });
-    } else {
-      skills.forEach((skill) => {
-        skill.style.display = "none";
-      });
-      skillLevels.forEach((level) => {
-        level.classList.remove("no-hover");
-      });
-    }
-  });
-
-  checkbox2.addEventListener("change", function () {
-    if (checkbox2.checked) {
-      skills.forEach((skill) => {
-        skill.style.display = "block";
-      });
-      skillLevels.forEach((level) => {
-        level.classList.add("no-hover");
-      });
-    } else {
-      skills.forEach((skill) => {
-        skill.style.display = "none";
-      });
-      skillLevels.forEach((level) => {
-        level.classList.remove("no-hover");
-      });
-    }
-  });
-</script>
+<script src="scripts/a-propos.js"></script>
 
 </html>

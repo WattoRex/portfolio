@@ -59,7 +59,7 @@ main img {
   color: rgba(13, 27, 42, 1);
 }
 
-@media screen and (max-width: 792px) {
+@media screen and (max-width: 992px) {
   .accueil_titre_photo .photo {
     order: 1;
   }

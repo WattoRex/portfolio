@@ -3,21 +3,21 @@ h1 {
 }
 
 .CTA2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 28vh;
-  height: 6vh;
-  margin: auto;
-  background: #32557f;
-  transform: skew(-25deg);
-  margin-top: 2vh;
-  margin-bottom: 2vh;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+width: 28vh;
+height: 6vh;
+margin: auto;
+background: #32557f;
+transform: skew(-25deg);
+margin-top: 2vh;
+margin-bottom: 2vh;
 }
 
 .CTA2 h1 {
-  font-size: 3em;
+font-size: 3em;
 }
 
 .Contact {

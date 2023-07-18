@@ -89,7 +89,7 @@
   animation: fill 1.5s ease-out;
 }
 
-.skill-percent-number {
+.skill-percent-number, .skill-percent-number2 {
   display: none;
   margin-left: 20px;
   font-size: 16px;

@@ -15,6 +15,8 @@
 <body>
     <header>
         <nav>
+            <script src="scripts/nav.js">
+            </script>
             <a href="index.html"><img src="images/logo.png" alt="Logo Manier Valentin" /></a>
             <span id="menuItems">
                 <a class="liennav" href="index.html">Accueil</a>
@@ -79,24 +81,6 @@
     </form>
 </section>
 
-<script>
-    function toggleMenu() {
-        var menuItems = document.getElementById("menuItems");
-        if (menuItems.style.display === "none") {
-            menuItems.style.display = "flex";
-        } else {
-            menuItems.style.display = "none";
-        }
-    }
-
-    const containerMenu = document.querySelector('.container-menu');
-    const btnMenu = document.querySelector('.btn-menu');
-
-    btnMenu.addEventListener('click', () => {
-
-        containerMenu.classList.toggle('active')
-
-    })
-</script>
+<script src="scripts/contact.js"></script>
 
 </html>
