@@ -84,15 +84,16 @@
   right: 0;
   bottom: 150px;
   z-index: 999;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
   background-color: rgba(0, 0, 0, 0.8);
   overflow: auto;
 }
 
 .project.active img {
-object-fit: cover;
+height: 40vh;
+width: 40vh;
+position: relative;
+top: 10vh;
+left: 16vh;
 }
 
 .project.active .info {

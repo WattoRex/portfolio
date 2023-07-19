@@ -6,6 +6,7 @@
   width: 85%;
   text-align: justify;
   margin: auto;
+  margin-top: 4vh;
 }
 
 .card-container {
@@ -14,15 +15,26 @@
   justify-content: space-around;
 }
 
+.Compétence {
+margin-top: 4vh;  
+}
+
 /* CSS pour les compétence */
 /* Valeur Compétence */
 :root {
-  --html-skill-percent: 90%;
-  --css-skill-percent: 80%;
-  --javascript-skill-percent: 75%;
-  --php-skill-percent: 70%;
-  --sql-skill-percent: 65%;
+  --html-skill-percent: 60%;
+  --css-skill-percent: 40%;
+  --javascript-skill-percent: 15%;
+  --php-skill-percent: 15%;
+  --sql-skill-percent: 5%;
+  --design-skill-percent: 40%;
+  --animation-skill-percent: 20%;
+  --adobecc-skill-percent: 50%;
+  --photo-skill-percent: 70%;
+  --CMS-skill-percent: 5%;
 }
+ 
+/* Bar Code */
 .skill-percent.html {
   width: var(--html-skill-percent);
 }
@@ -35,10 +47,26 @@
 .skill-percent.php {
   width: var(--php-skill-percent);
 }
-
 .skill-percent.sql {
   width: var(--sql-skill-percent);
 }
+/* Bar Skills */
+.skill-percent.design {
+  width: var(--design-skill-percent);
+}
+.skill-percent.animation {
+  width: var(--animation-skill-percent);
+}
+.skill-percent.adobecc {
+  width: var(--adobecc-skill-percent);
+}
+.skill-percent.photo {
+  width: var(--photo-skill-percent);
+}
+.skill-percent.CMS {
+  width: var(--CMS-skill-percent);
+}
+
 
 /* Mise en forme */
 

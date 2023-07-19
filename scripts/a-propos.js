@@ -1,7 +1,6 @@
 const skillElements = document.querySelectorAll(".skill");
 
 skillElements.forEach((skillElement) => {
-  const skillPercentElement = skillElement.querySelector(".skill-percent");
   const skillPercentNumberElement = skillElement.querySelector(
     ".skill-percent-number"
   );
@@ -12,6 +11,18 @@ skillElements.forEach((skillElement) => {
 
   skillElement.addEventListener("mouseleave", () => {
     skillPercentNumberElement.style.display = "none";
+  });
+
+  const skillPercentNumberElement2 = skillElement.querySelector(
+    ".skill-percent-number2"
+  );
+
+  skillElement.addEventListener("mouseenter", () => {
+    skillPercentNumberElement2.style.display = "block";
+  });
+
+  skillElement.addEventListener("mouseleave", () => {
+    skillPercentNumberElement2.style.display = "none";
   });
 });
 
