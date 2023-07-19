@@ -132,3 +132,17 @@ margin-top: 4vh;
 .no-hover:hover {
   pointer-events: none;
 }
+
+.CTA2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 28vh;
+  height: 6vh;
+  margin: auto;
+  background: #32557f;
+  transform: skew(-25deg);
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  }
