@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Portfolio de Manier Valentin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="style/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style/portfolio.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <script src="scripts/nav.js">
+      </script>
+      <a href="index.html"><img src="images/logo.png" alt="Logo Manier Valentin" /></a>
+      <span id="menuItems">
+        <a class="liennav" href="index.html">Accueil</a>
+        <a class="liennav" href="a-propos.html">À propos</a>
+        <a class="liennav" href="portfolio.html">Portfolio</a>
+        <a class="liennav" href="contact.html">Contact</a>
+      </span>
+      <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+        &#9776;
+      </a>
+    </nav>
+  </header>
+
+  <div class="CTA2">
+    <h1>Portfolio</h1>
+  </div>
+
+  <section class="portfolio">
+    <span class="project" onclick="toggleProject(this)">
+      <img src="images/Projet Calculette.PNG" alt="Projet 1">
+      <span class="info">
+        <h2>Projet 1</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum cupiditate,
+          pariatur molestias et velit reprehenderit, eius quisquam optio esse dignissimos nam beatae modi
+          aliquid facilis id iure error ex aliquam!.</p>
+        <div class="lienProjet"><a href="">Lien Projet</a></div>
+      </span>
+    </span>
+
+    <span class="project" onclick="toggleProject(this)">
+      <img src="images/ProjetJustePrix.PNG" alt="Projet 2">
+      <span class="info">
+        <h2>Projet 2</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum cupiditate,
+          pariatur molestias et velit reprehenderit, eius quisquam optio esse dignissimos nam beatae modi
+          aliquid facilis id iure error ex aliquam!</p>
+        <div class="lienProjet"><a href="">Lien Projet</a></div>
+      </span>
+    </span>
+
+    <span class="project" onclick="toggleProject(this)">
+      <img src="images/ProjetLancerDé.PNG" Projet 3">
+      <span class="info">
+        <h2>Projet 3</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum cupiditate,
+          pariatur molestias et velit reprehenderit, eius quisquam optio esse dignissimos nam beatae modi
+          aliquid facilis id iure error ex aliquam!</p>
+        <div class="lienProjet"><a href="">Lien Projet</a></div>
+      </span>
+    </span>
+
+    <span class="project" onclick="toggleProject(this)">
+      <img src="path/to/image4.jpg" alt="Projet 4">
+      <span class="info">
+        <h2>Projet 4</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum cupiditate,
+          pariatur molestias et velit reprehenderit, eius quisquam optio esse dignissimos nam beatae modi
+          aliquid facilis id iure error ex aliquam!</p>
+        <div class="lienProjet"><a href="">Lien Projet</a></div>
+      </span>
+    </span>
+</body>
+
+<button class="show-all-btn" id="test" onclick="showAllProjects()">Afficher tous les projets</button>
+
+<script src="scripts/portfolio.js"></script>
+
+</html>

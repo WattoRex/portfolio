@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Portfolio de Manier Valentin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style/style.css" rel="stylesheet" />
+    <link href="style/contact.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <script src="scripts/nav.js">
+            </script>
+            <a href="index.html"><img src="images/logo.png" alt="Logo Manier Valentin" /></a>
+            <span id="menuItems">
+                <a class="liennav" href="index.html">Accueil</a>
+                <a class="liennav" href="a-propos.html">À propos</a>
+                <a class="liennav" href="portfolio.html">Portfolio</a>
+                <a class="liennav" href="contact.html">Contact</a>
+            </span>
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                &#9776;
+            </a>
+        </nav>
+    </header>
+</body>
+
+<div class="CTA2">
+    <h1>Contact</h1>
+</div>
+<section class="Contact">
+    <section class="section-RS">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta doloremque sit corrupti fuga quam tempora
+            maiores molestiae perspiciatis, dolores architecto magni quis rerum numquam velit ex, alias repellat, optio
+            sed! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa ea repudiandae quo temporibus, cumque
+            voluptatum, quis nihil tenetur at quaerat ut adipisci veniam dolores laborum quisquam odio? Et, beatae
+            optio.</p>
+    </section>
+    <section class="container-menu">
+        <div class="btn-menu">
+            <div class="ligne"></div>
+        </div>
+
+        <div class="blob blob-2">
+            <a href="https://www.linkedin.com/in/valentin-manier-a18255150/" target="_blank"><img
+                    src="images/LogoIinkedin.png" alt="logo linkedin" class="icone"></a>
+        </div>
+        <div class="blob blob-3">
+            <a href="https://www.behance.net/" target="_blank"><img src="images/LogoBehance.png" alt="Logo Behance""
+                    class=" icone"></a>
+        </div>
+        <div class="blob blob-4">
+            <a href="https://github.com/WattoRex" target="_blank"><img src="images/LogoGit.png" alt="Logo Git"
+                    class="icone"></a>
+        </div>
+    </section>
+</section>
+
+<section class="section-contact" id="contact">
+    <h2>Parlons de votre projet</h2>
+    <form method="get" action="">
+        <div class="form-nom-email">
+            <div class="form-column">
+                <label for="nom">Nom</label>
+                <input type="text" name="nom" id="nom" />
+            </div>
+            <div class="form-column">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" />
+            </div>
+        </div>
+        <label for="message">Message</label>
+        <textarea name="message" id="message" rows="10"></textarea>
+        <div class="Envoyer"><input type="submit" value="ENVOYER" class="cta" /></div>
+    </form>
+</section>
+
+<script src="scripts/contact.js"></script>
+
+</html>

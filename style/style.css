@@ -1,0 +1,109 @@
+* {
+  /* Reset CSS */
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3.5em;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 1em;
+  background-color: rgba(224, 225, 221, 1);
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Manrope", sans-serif;
+}
+
+header {
+  padding: 5px 20px;
+  background-color: rgba(119, 141, 169, 1);
+}
+
+nav a {
+  margin-left: 30px;
+  color: #242424;
+  text-decoration: none;
+  background-image: linear-gradient(to right, #415a77, #415a77 0%, #242424 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+nav .liennav:before {
+  content: "";
+  background: #32557f;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+nav .liennav:hover {
+  background-position: 0;
+}
+
+a:hover::before {
+  width: 100%;
+}
+
+nav img {
+  width: 6vh;
+  height: 6vh;
+}
+
+a:hover {
+  color: #242424;
+  text-decoration: none;
+}
+
+#menuItems {
+  display: flex;
+}
+
+#menuItems a {
+  display: block;
+}
+
+.icon {
+  display: none;
+  color: #242424;
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 2vh;
+}
+
+@media only screen and (max-width: 781px) {
+  #menuItems {
+    display: none;
+  }
+
+  .icon {
+    display: block;
+  }
+
+  .accueil_titre_photo img {
+    margin-top: 2vh;
+  }
+}

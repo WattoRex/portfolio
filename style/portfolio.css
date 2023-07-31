@@ -1,0 +1,151 @@
+/* Titre */
+.CTA2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 30vh;
+  height: 6vh;
+  margin: auto;
+  background: #32557f;
+  transform: skew(-25deg);
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.CTA2 h1 {
+  font-size: 3em;
+}
+
+/* Styles pour la mise en page */
+
+.portfolio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: flex-start;
+  width: 90%;
+  margin: auto;
+}
+
+.project {
+  flex-basis: calc(33.33% - 20px);
+  margin: 10px;
+  height: 200px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: flex-basis 0.3s ease;
+  position: relative;
+  border-radius: 5%;
+}
+
+.project:hover {
+  flex-basis: calc(33.33% + 20px);
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project:hover img {
+  transform: scale(1.2);
+}
+
+.project .info {
+  display: none;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #778DA9;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  overflow: auto;
+  text-align: justify;
+}
+
+.project.active {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  width: 80%;
+  margin: auto;
+  flex-basis: calc(100% - 20px);
+  height: auto;
+  cursor: initial;
+  position: fixed;
+  top: 200px;
+  left: 0;
+  right: 0;
+  bottom: 150px;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: auto;
+}
+
+.project.active img {
+height: 40vh;
+width: 40vh;
+position: relative;
+top: 10vh;
+left: 16vh;
+}
+
+.project.active .info {
+  display: block;
+}
+
+.project .info h2 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+  margin-bottom: 2vh;
+}
+
+.project .info .lienProjet {
+  display: flex;
+  margin: auto;
+  
+}
+
+.project .info .lienProjet a {
+  text-decoration: none;
+  position: relative;
+  top: 4vh;
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 25%;
+  padding: 4px;
+  color: #0D1B2A;
+}
+
+.show-all-btn {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: none;
+}
+
+/* Anim Hover lien projet */
+
+
+@media (max-width: 768px) {
+  .portfolio {
+    flex-wrap: wrap;
+  }
+
+  .project {
+    flex-basis: 100%;
+  }
+
+  .show-all-btn {
+    display: block;
+  }
+}

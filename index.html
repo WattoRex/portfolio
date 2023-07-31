@@ -1,16 +1,44 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio de Manier Valentin</title>
+  <meta charset="UTF-8" />
+  <title>Portfolio de Manier Valentin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="style/style.css" rel="stylesheet" />
+  <link href="style/index.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap" rel="stylesheet" />
 </head>
+
 <body>
-    <header>
-        <nav>
-            
-        </nav>
-    </header>
-    <h1>Test</h1>
+  <header>
+    <nav>
+      <script src="scripts/nav.js">
+      </script>
+      <a href="index.html"><img src="images/logo.png" alt="Logo Manier Valentin" /></a>
+      <span id="menuItems">
+        <a class="liennav" href="index.html">Accueil</a>
+        <a class="liennav" href="a-propos.html">À propos</a>
+        <a class="liennav" href="portfolio.html">Portfolio</a>
+        <a class="liennav" href="contact.html">Contact</a>
+      </span>
+      <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+        &#9776;
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="accueil_titre_photo">
+      <span>
+        <h1 class="titre">Manier Valentin</h1>
+        <h2>Développeur à votre service ! </h2>
+        <div class="CTA2"><a href="a-propos.html">Decouvrez Moi !</a></div>
+      </span>
+      <img class="photo" src="images/maniervalentin_webdeveloper.png" />
+  </main>
 </body>
+
 </html>
